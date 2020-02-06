@@ -4,13 +4,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "./styles";
 import WeatherIcon from "./WeatherIcon";
 
-
-
 function Forecast({ forecasts }) {
   return (
     <div>
       <Container>
-        <h1>Forecast</h1>
+        <h1>Forecasts</h1>
         <Row>
           {forecasts.map((val, index) => (
             <Col style={styles.col} xs={3} md={2} key={index}>

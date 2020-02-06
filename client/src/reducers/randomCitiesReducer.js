@@ -1,4 +1,8 @@
-import { RANDOM_CITIES_FAILED, RANDOM_CITIES_REQUEST, RANDOM_CITIES_SUCCESS } from "../actions/randomCities";
+import {
+  RANDOM_CITIES_FAILED,
+  RANDOM_CITIES_REQUEST,
+  RANDOM_CITIES_SUCCESS
+} from "../actions/randomCities";
 
 const initialState = {
   cities: [null, null, null],

@@ -9,7 +9,7 @@ const styles = {
     fontSize: "xx-large"
   },
   units: {
-    fontSize: 'small'
+    fontSize: "small"
   }
 };
 

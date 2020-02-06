@@ -10,6 +10,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <MainCard />
+        <div>Auther: Swapnil Misal</div>
       </div>
     </Provider>
   );

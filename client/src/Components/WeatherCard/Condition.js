@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "./styles";
 import WeatherIcon from "./WeatherIcon";
 
-
 function Condition({ condition }) {
   return (
     <div>

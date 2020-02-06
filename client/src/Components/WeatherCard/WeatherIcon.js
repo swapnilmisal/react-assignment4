@@ -14,7 +14,9 @@ function WeatherIcon({ weatherCode }) {
   }
   return (
     <div>
-      <i className={`fas fa-${weatherCodeToWeatherString(weatherCode)} fa-2x`}></i>
+      <i
+        className={`fas fa-${weatherCodeToWeatherString(weatherCode)} fa-2x`}
+      ></i>
     </div>
   );
 }
