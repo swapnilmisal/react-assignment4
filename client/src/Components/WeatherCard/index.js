@@ -20,7 +20,7 @@ function WeatherCard({
   }, [city]);
 
   return loading || error ? (
-    <Skeleton count={14} />
+    <Skeleton count={21} />
   ) : (
     <>
       <Condition condition={currentObservation.condition} />
