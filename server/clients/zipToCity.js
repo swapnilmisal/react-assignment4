@@ -1,23 +1,24 @@
-const request = require("https");
 const googleMapsClient = require("@google/maps").createClient({
   key: process.env.GOOGLE_MAPS_API_KEY,
   Promise: Promise
 });
 
-console.log("dear");
-function zipToCity(zipCode) {
-  googleMapsClient
-    .geocode({
-      address: zipCode
-    })
-    .asPromise()
+function zipToCity(zipcode) {
+  zipToCityPromise(zipcode)
     .then(response => {
       const results = response.json.results;
-      console.log(results[0]["formatted_address"]);
+      return results[0]["formatted_address"];
     })
     .catch(err => {
       console.log(err);
     });
 }
-zipToCity("10003");
-module.exports = { zipToCity };
+
+function zipToCityPromise(zipcode) {
+  return googleMapsClient
+    .geocode({
+      address: zipcode
+    })
+    .asPromise();
+}
+module.exports = { zipToCity, zipToCityPromise };
